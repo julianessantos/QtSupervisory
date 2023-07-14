@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QTcpSocket>
 #include <QDebug>
+#include <QTimerEvent>
 
 namespace Ui {
 class MainWindow;
@@ -18,6 +19,7 @@ public:
   ~MainWindow();
   
   void tcpConnect();
+
 public slots:
   void putData();
     void timerEvent(QTimerEvent *event);

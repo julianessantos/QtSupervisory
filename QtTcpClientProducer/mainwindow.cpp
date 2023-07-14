@@ -10,9 +10,14 @@ MainWindow::MainWindow(QWidget *parent) :
   tcpConnect();
 
   connect(ui->start,
-          SIGNAL(clicked(bool)),
+          SIGNAL(clicked()),
           this,
           SLOT(IniciarTemp())
+          );
+  connect(ui->stop,
+          SIGNAL(clicked()),
+          this,
+          SLOT(ParaTemp())
           );
   connect(ui->connect,
           SIGNAL(clicked()),
@@ -24,11 +29,6 @@ MainWindow::MainWindow(QWidget *parent) :
           this,
           SLOT(on_disconnect_clicked())
           );
-  connect(ui->stop,
-          SIGNAL(clicked()),
-          this,
-          SLOT(ParaTimer())
-        );
 }
 
 void MainWindow::tcpConnect(){
@@ -67,19 +67,6 @@ void MainWindow::putData(){
   }
 }
 
-void MainWindow::timerEvent(QTimerEvent *event){
-  putData();
-}
-
-void MainWindow::IniciarTemp(){
-  int temp_seg = 1000*ui->barraTimer->value();
-  temporizador = startTimer(temp_seg);
-}
-
-void MainWindow::ParaTemp(){
-  killTimer(temporizador);
-}
-
 void MainWindow::on_connect_clicked()
 {
     tcpConnect();
@@ -91,6 +78,19 @@ void MainWindow::on_disconnect_clicked()
 {
     socket->disconnectFromHost();
     ui->onoff->setText("Desconectado");
+}
+
+void MainWindow::timerEvent(QTimerEvent *event){
+    putData();
+}
+
+void MainWindow::IniciarTemp(){
+    int temp_seg = 1000*ui->barraTimer->value();
+    temporizador = startTimer(temp_seg);
+}
+
+void MainWindow::ParaTemp(){
+    killTimer(temporizador);
 }
 
 

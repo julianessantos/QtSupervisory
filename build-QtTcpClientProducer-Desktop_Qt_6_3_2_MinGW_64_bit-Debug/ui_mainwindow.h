@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QLCDNumber>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
@@ -29,22 +30,24 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralWidget;
+    QWidget *widget;
+    QGridLayout *gridLayout;
     QLineEdit *endIp;
+    QTextBrowser *tabela;
     QPushButton *connect;
     QPushButton *disconnect;
+    QLabel *label;
     QSlider *barraMin;
     QLCDNumber *min;
-    QLabel *label;
+    QLabel *label_2;
     QSlider *barraMax;
     QLCDNumber *max;
-    QLabel *label_2;
     QLabel *label_3;
     QSlider *barraTimer;
     QLabel *contTimer;
-    QLabel *onoff;
     QPushButton *start;
     QPushButton *stop;
-    QTextBrowser *tabela;
+    QLabel *onoff;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -56,57 +59,97 @@ public:
         MainWindow->resize(537, 344);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
-        endIp = new QLineEdit(centralWidget);
+        widget = new QWidget(centralWidget);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(10, 10, 521, 271));
+        gridLayout = new QGridLayout(widget);
+        gridLayout->setSpacing(6);
+        gridLayout->setContentsMargins(11, 11, 11, 11);
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        gridLayout->setContentsMargins(0, 0, 0, 0);
+        endIp = new QLineEdit(widget);
         endIp->setObjectName(QString::fromUtf8("endIp"));
-        endIp->setGeometry(QRect(10, 10, 251, 21));
-        connect = new QPushButton(centralWidget);
-        connect->setObjectName(QString::fromUtf8("connect"));
-        connect->setGeometry(QRect(10, 40, 121, 24));
-        disconnect = new QPushButton(centralWidget);
-        disconnect->setObjectName(QString::fromUtf8("disconnect"));
-        disconnect->setGeometry(QRect(149, 40, 111, 24));
-        barraMin = new QSlider(centralWidget);
-        barraMin->setObjectName(QString::fromUtf8("barraMin"));
-        barraMin->setGeometry(QRect(10, 90, 160, 16));
-        barraMin->setOrientation(Qt::Horizontal);
-        min = new QLCDNumber(centralWidget);
-        min->setObjectName(QString::fromUtf8("min"));
-        min->setGeometry(QRect(190, 90, 64, 23));
-        label = new QLabel(centralWidget);
-        label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(190, 70, 49, 16));
-        barraMax = new QSlider(centralWidget);
-        barraMax->setObjectName(QString::fromUtf8("barraMax"));
-        barraMax->setGeometry(QRect(10, 140, 160, 16));
-        barraMax->setOrientation(Qt::Horizontal);
-        max = new QLCDNumber(centralWidget);
-        max->setObjectName(QString::fromUtf8("max"));
-        max->setGeometry(QRect(190, 140, 64, 23));
-        label_2 = new QLabel(centralWidget);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(190, 120, 49, 16));
-        label_3 = new QLabel(centralWidget);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(10, 190, 51, 16));
-        barraTimer = new QSlider(centralWidget);
-        barraTimer->setObjectName(QString::fromUtf8("barraTimer"));
-        barraTimer->setGeometry(QRect(70, 190, 160, 16));
-        barraTimer->setOrientation(Qt::Horizontal);
-        contTimer = new QLabel(centralWidget);
-        contTimer->setObjectName(QString::fromUtf8("contTimer"));
-        contTimer->setGeometry(QRect(240, 190, 21, 16));
-        onoff = new QLabel(centralWidget);
-        onoff->setObjectName(QString::fromUtf8("onoff"));
-        onoff->setGeometry(QRect(10, 260, 101, 16));
-        start = new QPushButton(centralWidget);
-        start->setObjectName(QString::fromUtf8("start"));
-        start->setGeometry(QRect(20, 230, 111, 24));
-        stop = new QPushButton(centralWidget);
-        stop->setObjectName(QString::fromUtf8("stop"));
-        stop->setGeometry(QRect(150, 230, 101, 24));
-        tabela = new QTextBrowser(centralWidget);
+
+        gridLayout->addWidget(endIp, 0, 0, 1, 5);
+
+        tabela = new QTextBrowser(widget);
         tabela->setObjectName(QString::fromUtf8("tabela"));
-        tabela->setGeometry(QRect(270, 10, 256, 251));
+
+        gridLayout->addWidget(tabela, 0, 5, 8, 1);
+
+        connect = new QPushButton(widget);
+        connect->setObjectName(QString::fromUtf8("connect"));
+
+        gridLayout->addWidget(connect, 1, 0, 1, 2);
+
+        disconnect = new QPushButton(widget);
+        disconnect->setObjectName(QString::fromUtf8("disconnect"));
+
+        gridLayout->addWidget(disconnect, 1, 2, 1, 3);
+
+        label = new QLabel(widget);
+        label->setObjectName(QString::fromUtf8("label"));
+
+        gridLayout->addWidget(label, 2, 3, 1, 1);
+
+        barraMin = new QSlider(widget);
+        barraMin->setObjectName(QString::fromUtf8("barraMin"));
+        barraMin->setOrientation(Qt::Horizontal);
+
+        gridLayout->addWidget(barraMin, 3, 0, 1, 3);
+
+        min = new QLCDNumber(widget);
+        min->setObjectName(QString::fromUtf8("min"));
+
+        gridLayout->addWidget(min, 3, 3, 1, 2);
+
+        label_2 = new QLabel(widget);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+
+        gridLayout->addWidget(label_2, 4, 3, 1, 1);
+
+        barraMax = new QSlider(widget);
+        barraMax->setObjectName(QString::fromUtf8("barraMax"));
+        barraMax->setOrientation(Qt::Horizontal);
+
+        gridLayout->addWidget(barraMax, 5, 0, 1, 3);
+
+        max = new QLCDNumber(widget);
+        max->setObjectName(QString::fromUtf8("max"));
+
+        gridLayout->addWidget(max, 5, 3, 1, 2);
+
+        label_3 = new QLabel(widget);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+
+        gridLayout->addWidget(label_3, 6, 0, 1, 1);
+
+        barraTimer = new QSlider(widget);
+        barraTimer->setObjectName(QString::fromUtf8("barraTimer"));
+        barraTimer->setOrientation(Qt::Horizontal);
+
+        gridLayout->addWidget(barraTimer, 6, 1, 1, 3);
+
+        contTimer = new QLabel(widget);
+        contTimer->setObjectName(QString::fromUtf8("contTimer"));
+
+        gridLayout->addWidget(contTimer, 6, 4, 1, 1);
+
+        start = new QPushButton(widget);
+        start->setObjectName(QString::fromUtf8("start"));
+
+        gridLayout->addWidget(start, 7, 0, 1, 2);
+
+        stop = new QPushButton(widget);
+        stop->setObjectName(QString::fromUtf8("stop"));
+
+        gridLayout->addWidget(stop, 7, 2, 1, 3);
+
+        onoff = new QLabel(widget);
+        onoff->setObjectName(QString::fromUtf8("onoff"));
+
+        gridLayout->addWidget(onoff, 8, 0, 1, 2);
+
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
@@ -133,9 +176,9 @@ public:
         label_2->setText(QCoreApplication::translate("MainWindow", "Max", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "Timing(s)", nullptr));
         contTimer->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
-        onoff->setText(QCoreApplication::translate("MainWindow", "Aguardando...", nullptr));
         start->setText(QCoreApplication::translate("MainWindow", "start", nullptr));
         stop->setText(QCoreApplication::translate("MainWindow", "stop", nullptr));
+        onoff->setText(QCoreApplication::translate("MainWindow", "Aguardando...", nullptr));
     } // retranslateUi
 
 };
