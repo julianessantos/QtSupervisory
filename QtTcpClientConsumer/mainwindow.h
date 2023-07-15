@@ -20,6 +20,10 @@ public:
   void tcpConnect();
 public slots:
   void getData();
+private slots:
+    void on_desconectado_clicked();
+    void on_conectado_clicked();
+
 private:
   Ui::MainWindow *ui;
   QTcpSocket *socket;

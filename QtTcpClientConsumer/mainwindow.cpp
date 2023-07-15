@@ -10,11 +10,16 @@ MainWindow::MainWindow(QWidget *parent) :
   socket = new QTcpSocket(this);
   tcpConnect();
 
-  connect(ui->pushButtonGet,
+  connect(ui->conectado,
           SIGNAL(clicked(bool)),
           this,
-          SLOT(getData()));
+          SLOT(on_conectado_clicked()));
+  connect(ui->desconectado,
+          SIGNAL(clicked(bool)),
+          this,
+          SLOT(on_desconectado_clicked()));
 }
+
 
 void MainWindow::tcpConnect(){
   socket->connectToHost("127.0.0.1",1234);
@@ -60,3 +65,16 @@ MainWindow::~MainWindow()
   delete socket;
   delete ui;
 }
+
+void MainWindow::on_conectado_clicked()
+{
+  tcpConnect();
+}
+
+void MainWindow::on_desconectado_clicked()
+{
+  socket->disconnectFromHost();
+}
+
+
+

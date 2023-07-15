@@ -11,6 +11,9 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -24,7 +27,11 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralWidget;
-    QPushButton *pushButtonGet;
+    QPushButton *conectado;
+    QLineEdit *endIp;
+    QPushButton *desconectado;
+    QLabel *label;
+    QListWidget *listaDeIPs;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -36,13 +43,25 @@ public:
         MainWindow->resize(463, 421);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
-        pushButtonGet = new QPushButton(centralWidget);
-        pushButtonGet->setObjectName(QString::fromUtf8("pushButtonGet"));
-        pushButtonGet->setGeometry(QRect(170, 60, 101, 29));
+        conectado = new QPushButton(centralWidget);
+        conectado->setObjectName(QString::fromUtf8("conectado"));
+        conectado->setGeometry(QRect(11, 60, 91, 21));
+        endIp = new QLineEdit(centralWidget);
+        endIp->setObjectName(QString::fromUtf8("endIp"));
+        endIp->setGeometry(QRect(11, 30, 191, 21));
+        desconectado = new QPushButton(centralWidget);
+        desconectado->setObjectName(QString::fromUtf8("desconectado"));
+        desconectado->setGeometry(QRect(110, 60, 91, 21));
+        label = new QLabel(centralWidget);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(10, 10, 91, 16));
+        listaDeIPs = new QListWidget(centralWidget);
+        listaDeIPs->setObjectName(QString::fromUtf8("listaDeIPs"));
+        listaDeIPs->setGeometry(QRect(10, 90, 191, 131));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 463, 22));
+        menuBar->setGeometry(QRect(0, 0, 463, 21));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
@@ -59,7 +78,9 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        pushButtonGet->setText(QCoreApplication::translate("MainWindow", "getData", nullptr));
+        conectado->setText(QCoreApplication::translate("MainWindow", "Connect", nullptr));
+        desconectado->setText(QCoreApplication::translate("MainWindow", "Disconnect", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "IP do Servidor", nullptr));
     } // retranslateUi
 
 };
