@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -25,7 +25,11 @@
     </property>
     <layout class="QGridLayout" name="gridLayout">
      <item row="0" column="0" colspan="5">
-      <widget class="QLineEdit" name="endIp"/>
+      <widget class="QLineEdit" name="endIp">
+       <property name="text">
+        <string>127.0.0.1</string>
+       </property>
+      </widget>
      </item>
      <item row="0" column="5" rowspan="8">
       <widget class="QTextBrowser" name="tabela"/>
@@ -59,7 +63,17 @@
       </widget>
      </item>
      <item row="3" column="3" colspan="2">
-      <widget class="QLCDNumber" name="min"/>
+      <widget class="QLCDNumber" name="min">
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="segmentStyle">
+        <enum>QLCDNumber::Flat</enum>
+       </property>
+      </widget>
      </item>
      <item row="4" column="3">
       <widget class="QLabel" name="label_2">
@@ -76,7 +90,14 @@
       </widget>
      </item>
      <item row="5" column="3" colspan="2">
-      <widget class="QLCDNumber" name="max"/>
+      <widget class="QLCDNumber" name="max">
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="segmentStyle">
+        <enum>QLCDNumber::Flat</enum>
+       </property>
+      </widget>
      </item>
      <item row="6" column="0">
       <widget class="QLabel" name="label_3">
@@ -87,6 +108,9 @@
      </item>
      <item row="6" column="1" colspan="3">
       <widget class="QSlider" name="barraTimer">
+       <property name="minimum">
+        <number>1</number>
+       </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -95,28 +119,35 @@
      <item row="6" column="4">
       <widget class="QLabel" name="contTimer">
        <property name="text">
-        <string>0</string>
+        <string>1</string>
        </property>
       </widget>
      </item>
      <item row="7" column="0" colspan="2">
       <widget class="QPushButton" name="start">
        <property name="text">
-        <string>start</string>
+        <string>Start</string>
        </property>
       </widget>
      </item>
      <item row="7" column="2" colspan="3">
       <widget class="QPushButton" name="stop">
        <property name="text">
-        <string>stop</string>
+        <string>Stop</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="5">
+      <widget class="QLabel" name="onoff_2">
+       <property name="text">
+        <string/>
        </property>
       </widget>
      </item>
      <item row="8" column="0" colspan="2">
       <widget class="QLabel" name="onoff">
        <property name="text">
-        <string>Aguardando...</string>
+        <string>Status</string>
        </property>
       </widget>
      </item>

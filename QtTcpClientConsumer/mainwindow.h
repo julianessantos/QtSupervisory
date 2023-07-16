@@ -20,9 +20,15 @@ public:
   void tcpConnect();
 public slots:
   void getData();
+  void copiatexto();
+
 private slots:
     void on_desconectado_clicked();
     void on_conectado_clicked();
+
+
+
+    void on_barraTempo_valueChanged(int value);
 
 private:
   Ui::MainWindow *ui;

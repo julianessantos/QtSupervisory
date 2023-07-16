@@ -7,7 +7,6 @@ MainWindow::MainWindow(QWidget *parent) :
   QMainWindow(parent), ui(new Ui::MainWindow){
   ui->setupUi(this);
   socket = new QTcpSocket(this);
-  tcpConnect();
 
   connect(ui->start,
           SIGNAL(clicked()),
@@ -39,7 +38,6 @@ void MainWindow::tcpConnect(){
   }
   else{
     qDebug() << "Disconnected";
-      ui->onoff->setText("Desconectado");
   }
 }
 
@@ -70,7 +68,6 @@ void MainWindow::putData(){
 void MainWindow::on_connect_clicked()
 {
     tcpConnect();
-    ui->onoff->setText("Conectado");
 }
 
 
@@ -87,10 +84,12 @@ void MainWindow::timerEvent(QTimerEvent *event){
 void MainWindow::IniciarTemp(){
     int temp_seg = 1000*ui->barraTimer->value();
     temporizador = startTimer(temp_seg);
+    ui->onoff_2->setText("Start");
 }
 
 void MainWindow::ParaTemp(){
     killTimer(temporizador);
+    ui->onoff_2->setText("Stop");
 }
 
 

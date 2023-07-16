@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QDateTime>
+#include <QTextStream>
+#include <QTimerEvent>
 
 MainWindow::MainWindow(QWidget *parent) :
   QMainWindow(parent),
@@ -8,7 +10,6 @@ MainWindow::MainWindow(QWidget *parent) :
 {
   ui->setupUi(this);
   socket = new QTcpSocket(this);
-  tcpConnect();
 
   connect(ui->conectado,
           SIGNAL(clicked(bool)),
@@ -22,12 +23,16 @@ MainWindow::MainWindow(QWidget *parent) :
 
 
 void MainWindow::tcpConnect(){
-  socket->connectToHost("127.0.0.1",1234);
+  socket->connectToHost(ui->textEdit->toPlainText(),1234);
   if(socket->waitForConnected(3000)){
     qDebug() << "Connected";
+    ui->label_2->setText("Conectado");
+    ui->textBrowser->setText(ui->textEdit->toPlainText());
   }
   else{
     qDebug() << "Disconnected";
+    ui->label_2->setText("Desconectado");
+    ui->textBrowser->setText("Endereço de Ip inválido.");
   }
 }
 
@@ -59,6 +64,20 @@ void MainWindow::getData(){
   }
 }
 
+void MainWindow::copiatexto()
+{
+  QString end_ip ="127.0.0.1";
+
+  if(ui->textEdit->toPlainText() == end_ip){
+  tcpConnect();
+  ui->textBrowser->setText(ui->textEdit->toPlainText());
+  } else{
+  ui->textBrowser->setText("Endereço de Ip inválido.");
+  socket->disconnectFromHost();
+  ui->label_2->setText("Desconectado");
+  }
+}
+
 
 MainWindow::~MainWindow()
 {
@@ -68,13 +87,24 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_conectado_clicked()
 {
+  QString end_ip ="127.0.0.1";
+  if(ui->textEdit->toPlainText() == end_ip){
   tcpConnect();
-}
-
-void MainWindow::on_desconectado_clicked()
-{
+  }
+  else{
+  ui->textBrowser->setText("Endereço de Ip inválido.");
   socket->disconnectFromHost();
+  ui->label_2->setText("Desconectado");
+  }
 }
 
+void MainWindow::on_desconectado_clicked(){
+  socket->disconnectFromHost();
+  ui->label_2->setText("Desconectado");
+}
 
+void MainWindow::on_barraTempo_valueChanged(int value)
+{
+  ui->labelTemp->setText(QString::number(value));
+}
 

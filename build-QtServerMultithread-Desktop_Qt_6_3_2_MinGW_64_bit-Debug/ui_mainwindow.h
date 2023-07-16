@@ -13,7 +13,6 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHBoxLayout>
-#include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
@@ -30,7 +29,7 @@ public:
     QHBoxLayout *horizontalLayout_3;
     QGroupBox *groupBox;
     QHBoxLayout *horizontalLayout;
-    QListWidget *listWidget;
+    QTextBrowser *textBrowser_2;
     QGroupBox *groupBox_2;
     QHBoxLayout *horizontalLayout_2;
     QTextBrowser *textBrowser;
@@ -55,10 +54,10 @@ public:
         horizontalLayout->setSpacing(6);
         horizontalLayout->setContentsMargins(11, 11, 11, 11);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        listWidget = new QListWidget(groupBox);
-        listWidget->setObjectName(QString::fromUtf8("listWidget"));
+        textBrowser_2 = new QTextBrowser(groupBox);
+        textBrowser_2->setObjectName(QString::fromUtf8("textBrowser_2"));
 
-        horizontalLayout->addWidget(listWidget);
+        horizontalLayout->addWidget(textBrowser_2);
 
 
         horizontalLayout_3->addWidget(groupBox);
@@ -82,7 +81,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 634, 22));
+        menuBar->setGeometry(QRect(0, 0, 634, 21));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
@@ -100,6 +99,14 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         groupBox->setTitle(QCoreApplication::translate("MainWindow", "IPs do servidor", nullptr));
+        textBrowser_2->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">127.0.0.1</p></body></html>", nullptr));
         groupBox_2->setTitle(QCoreApplication::translate("MainWindow", "Mensagens", nullptr));
     } // retranslateUi
 
