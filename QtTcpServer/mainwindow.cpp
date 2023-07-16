@@ -15,7 +15,6 @@ MainWindow::MainWindow(QWidget *parent) :
   Server.startServer();
   QStringList list;
   list = Server.getIPList();
-  ui->listWidget->addItems(list);
 }
 
 MainWindow::~MainWindow()

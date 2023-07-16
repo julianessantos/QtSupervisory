@@ -7,7 +7,7 @@ MyServer::MyServer(QObject *parent) :
 }
 
 void MyServer::startServer(){
-  if(!this->listen(QHostAddress::Any, 1234)){
+  if(!this->listen(QHostAddress::LocalHost, 1234)){
     emit message(QString("<b>server did not start!</b>"));
   }
   else{
