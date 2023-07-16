@@ -1,7 +1,10 @@
 # Projeto de Programação 
 
-## Apresentação 
+### Alunos envolvidos: 
+JULIANE DA SILVA SANTOS (Matrícula 20200075288); 
+ANDRÉ ARAÚJO DE SOUZA SILVA (Matrícula 20190134520).
 
+## Apresentação 
 O presente projeto visa desenvolver o aluno na prática de programação
 orientada a objetos usando a biblioteca Qt.
 
