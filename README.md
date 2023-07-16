@@ -1,4 +1,4 @@
-# Projeto de Programação 
+# Projeto de Programação Avançada
 
 ### Alunos envolvidos: 
 JULIANE DA SILVA SANTOS (Matrícula 20200075288); 
