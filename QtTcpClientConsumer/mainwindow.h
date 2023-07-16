@@ -30,6 +30,8 @@ private slots:
 
     void on_barraTempo_valueChanged(int value);
 
+    void on_start_clicked();
+
 private:
   Ui::MainWindow *ui;
   QTcpSocket *socket;

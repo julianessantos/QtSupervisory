@@ -41,9 +41,7 @@ void Plotter::paintEvent(QPaintEvent *event)
     for(int i = 1; i<width(); i++){
         x2 = i; // Tempo
         y2 = m*x2 + b; // Valor gerado pela função afim
-
         painter.drawLine(x1, y1, x2, y2);
-
         x1 = x2;
         y1 = y2;
     }

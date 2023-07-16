@@ -19,6 +19,11 @@ MainWindow::MainWindow(QWidget *parent) :
           SIGNAL(clicked(bool)),
           this,
           SLOT(on_desconectado_clicked()));
+  connect(ui->start,
+          SIGNAL(clicked(bool)),
+          this,
+          SLOT(on_start_clicked())
+          );
 }
 
 
@@ -106,5 +111,11 @@ void MainWindow::on_desconectado_clicked(){
 void MainWindow::on_barraTempo_valueChanged(int value)
 {
   ui->labelTemp->setText(QString::number(value));
+}
+
+
+void MainWindow::on_start_clicked()
+{
+    getData();
 }
 
