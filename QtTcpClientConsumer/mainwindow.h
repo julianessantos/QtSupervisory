@@ -24,12 +24,17 @@ public:
 public slots:
   void getData();
   void copiatexto();
+  void valorInterv(int);
 
 private slots:
     void on_desconectado_clicked();
     void on_conectado_clicked();
     void on_barraTimer_valueChanged(int value);
     void on_start_clicked();
+    //void on_stop_clicked();
+    void timerStop();
+    void timerEvent();
+    //void updateIp();
 
 private:
   int interv;

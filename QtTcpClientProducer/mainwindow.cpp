@@ -82,10 +82,12 @@ void MainWindow::timerEvent(QTimerEvent *event){
 void MainWindow::IniciarTemp(){
     int temp_seg = 500*ui->barraTimer->value();
     temporizador = startTimer(temp_seg);
+    ui->label_4->setText("Start");
 }
 
 void MainWindow::ParaTemp(){
     killTimer(temporizador);
+    ui->label_4->setText("Stop");
 }
 
 

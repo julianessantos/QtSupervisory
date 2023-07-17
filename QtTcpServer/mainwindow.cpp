@@ -12,9 +12,11 @@ MainWindow::MainWindow(QWidget *parent) :
           SIGNAL(message(QString)),
           this,
           SLOT(showMessage(QString)));
+
   Server.startServer();
   QStringList list;
   list = Server.getIPList();
+  ui->listWidget->addItems(list);
 }
 
 MainWindow::~MainWindow()
