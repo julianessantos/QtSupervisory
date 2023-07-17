@@ -257,9 +257,14 @@ debug/moc_mainwindow.cpp: ../QtTcpClientConsumer/mainwindow.h \
 		C:/Qt/6.3.2/mingw_64/include/QtNetwork/qabstractsocket.h \
 		C:/Qt/6.3.2/mingw_64/include/QtNetwork/qhostaddress.h \
 		C:/Qt/6.3.2/mingw_64/include/QtCore/QDebug \
+		C:/Qt/6.3.2/mingw_64/include/QtWidgets/QWidget \
+		C:/Qt/6.3.2/mingw_64/include/QtCore/QTimer \
+		C:/Qt/6.3.2/mingw_64/include/QtCore/qtimer.h \
+		C:/Qt/6.3.2/mingw_64/include/QtCore/qbasictimer.h \
+		C:/Qt/6.3.2/mingw_64/include/QtCore/QString \
 		debug/moc_predefs.h \
 		C:/Qt/6.3.2/mingw_64/bin/moc.exe
-	C:\Qt\6.3.2\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/Julia/OneDrive/Documentos/UFRN/Semestres/7. Setimo Periodo (2023.1)/PA/Projeto 15.07/Projeto 15.07/QtSupervisory-main/build-QtTcpClientConsumer-Desktop_Qt_6_3_2_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/Qt/6.3.2/mingw_64/mkspecs/win32-g++ -I"C:/Users/Julia/OneDrive/Documentos/UFRN/Semestres/7. Setimo Periodo (2023.1)/PA/Projeto 15.07/Projeto 15.07/QtSupervisory-main/QtTcpClientConsumer" -IC:/Qt/6.3.2/mingw_64/include -IC:/Qt/6.3.2/mingw_64/include/QtWidgets -IC:/Qt/6.3.2/mingw_64/include/QtGui -IC:/Qt/6.3.2/mingw_64/include/QtNetwork -IC:/Qt/6.3.2/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\QtTcpClientConsumer\mainwindow.h -o debug\moc_mainwindow.cpp
+	C:\Qt\6.3.2\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/Julia/OneDrive/Documentos/UFRN/Semestres/7. Setimo Periodo (2023.1)/PROJETO_PA_3U/PROJETO_PA_3U/QtSupervisory-main/QtSupervisory-main/build-QtTcpClientConsumer-Desktop_Qt_6_3_2_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/Qt/6.3.2/mingw_64/mkspecs/win32-g++ -I"C:/Users/Julia/OneDrive/Documentos/UFRN/Semestres/7. Setimo Periodo (2023.1)/PROJETO_PA_3U/PROJETO_PA_3U/QtSupervisory-main/QtSupervisory-main/QtTcpClientConsumer" -IC:/Qt/6.3.2/mingw_64/include -IC:/Qt/6.3.2/mingw_64/include/QtWidgets -IC:/Qt/6.3.2/mingw_64/include/QtGui -IC:/Qt/6.3.2/mingw_64/include/QtNetwork -IC:/Qt/6.3.2/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\QtTcpClientConsumer\mainwindow.h -o debug\moc_mainwindow.cpp
 
 debug/moc_plotter.cpp: ../QtTcpClientConsumer/plotter.h \
 		C:/Qt/6.3.2/mingw_64/include/QtWidgets/QWidget \
@@ -394,9 +399,14 @@ debug/moc_plotter.cpp: ../QtTcpClientConsumer/plotter.h \
 		C:/Qt/6.3.2/mingw_64/include/QtCore/QSizeF \
 		C:/Qt/6.3.2/mingw_64/include/QtGui/QTransform \
 		C:/Qt/6.3.2/mingw_64/include/QtCore/qnativeinterface.h \
+		C:/Qt/6.3.2/mingw_64/include/QtCore/QTimer \
+		C:/Qt/6.3.2/mingw_64/include/QtCore/qtimer.h \
+		C:/Qt/6.3.2/mingw_64/include/QtCore/qbasictimer.h \
+		C:/Qt/6.3.2/mingw_64/include/QtCore/QVector \
+		C:/Qt/6.3.2/mingw_64/include/QtCore/qvector.h \
 		debug/moc_predefs.h \
 		C:/Qt/6.3.2/mingw_64/bin/moc.exe
-	C:\Qt\6.3.2\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/Julia/OneDrive/Documentos/UFRN/Semestres/7. Setimo Periodo (2023.1)/PA/Projeto 15.07/Projeto 15.07/QtSupervisory-main/build-QtTcpClientConsumer-Desktop_Qt_6_3_2_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/Qt/6.3.2/mingw_64/mkspecs/win32-g++ -I"C:/Users/Julia/OneDrive/Documentos/UFRN/Semestres/7. Setimo Periodo (2023.1)/PA/Projeto 15.07/Projeto 15.07/QtSupervisory-main/QtTcpClientConsumer" -IC:/Qt/6.3.2/mingw_64/include -IC:/Qt/6.3.2/mingw_64/include/QtWidgets -IC:/Qt/6.3.2/mingw_64/include/QtGui -IC:/Qt/6.3.2/mingw_64/include/QtNetwork -IC:/Qt/6.3.2/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\QtTcpClientConsumer\plotter.h -o debug\moc_plotter.cpp
+	C:\Qt\6.3.2\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/Julia/OneDrive/Documentos/UFRN/Semestres/7. Setimo Periodo (2023.1)/PROJETO_PA_3U/PROJETO_PA_3U/QtSupervisory-main/QtSupervisory-main/build-QtTcpClientConsumer-Desktop_Qt_6_3_2_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/Qt/6.3.2/mingw_64/mkspecs/win32-g++ -I"C:/Users/Julia/OneDrive/Documentos/UFRN/Semestres/7. Setimo Periodo (2023.1)/PROJETO_PA_3U/PROJETO_PA_3U/QtSupervisory-main/QtSupervisory-main/QtTcpClientConsumer" -IC:/Qt/6.3.2/mingw_64/include -IC:/Qt/6.3.2/mingw_64/include/QtWidgets -IC:/Qt/6.3.2/mingw_64/include/QtGui -IC:/Qt/6.3.2/mingw_64/include/QtNetwork -IC:/Qt/6.3.2/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\QtTcpClientConsumer\plotter.h -o debug\moc_plotter.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -539,7 +549,12 @@ ui_mainwindow.h: ../QtTcpClientConsumer/mainwindow.ui \
 		C:/Qt/6.3.2/mingw_64/include/QtCore/QSize \
 		C:/Qt/6.3.2/mingw_64/include/QtCore/QSizeF \
 		C:/Qt/6.3.2/mingw_64/include/QtGui/QTransform \
-		C:/Qt/6.3.2/mingw_64/include/QtCore/qnativeinterface.h
+		C:/Qt/6.3.2/mingw_64/include/QtCore/qnativeinterface.h \
+		C:/Qt/6.3.2/mingw_64/include/QtCore/QTimer \
+		C:/Qt/6.3.2/mingw_64/include/QtCore/qtimer.h \
+		C:/Qt/6.3.2/mingw_64/include/QtCore/qbasictimer.h \
+		C:/Qt/6.3.2/mingw_64/include/QtCore/QVector \
+		C:/Qt/6.3.2/mingw_64/include/QtCore/qvector.h
 	C:\Qt\6.3.2\mingw_64\bin\uic.exe ..\QtTcpClientConsumer\mainwindow.ui -o ui_mainwindow.h
 
 compiler_yacc_decl_make_all:
@@ -697,6 +712,11 @@ debug/main.o: ../QtTcpClientConsumer/main.cpp ../QtTcpClientConsumer/mainwindow.
 		C:/Qt/6.3.2/mingw_64/include/QtNetwork/qabstractsocket.h \
 		C:/Qt/6.3.2/mingw_64/include/QtNetwork/qhostaddress.h \
 		C:/Qt/6.3.2/mingw_64/include/QtCore/QDebug \
+		C:/Qt/6.3.2/mingw_64/include/QtWidgets/QWidget \
+		C:/Qt/6.3.2/mingw_64/include/QtCore/QTimer \
+		C:/Qt/6.3.2/mingw_64/include/QtCore/qtimer.h \
+		C:/Qt/6.3.2/mingw_64/include/QtCore/qbasictimer.h \
+		C:/Qt/6.3.2/mingw_64/include/QtCore/QString \
 		C:/Qt/6.3.2/mingw_64/include/QtWidgets/QApplication \
 		C:/Qt/6.3.2/mingw_64/include/QtWidgets/qapplication.h \
 		C:/Qt/6.3.2/mingw_64/include/QtCore/qcoreapplication.h \
@@ -863,6 +883,11 @@ debug/mainwindow.o: ../QtTcpClientConsumer/mainwindow.cpp ../QtTcpClientConsumer
 		C:/Qt/6.3.2/mingw_64/include/QtNetwork/qabstractsocket.h \
 		C:/Qt/6.3.2/mingw_64/include/QtNetwork/qhostaddress.h \
 		C:/Qt/6.3.2/mingw_64/include/QtCore/QDebug \
+		C:/Qt/6.3.2/mingw_64/include/QtWidgets/QWidget \
+		C:/Qt/6.3.2/mingw_64/include/QtCore/QTimer \
+		C:/Qt/6.3.2/mingw_64/include/QtCore/qtimer.h \
+		C:/Qt/6.3.2/mingw_64/include/QtCore/qbasictimer.h \
+		C:/Qt/6.3.2/mingw_64/include/QtCore/QString \
 		ui_mainwindow.h \
 		C:/Qt/6.3.2/mingw_64/include/QtCore/QDateTime \
 		C:/Qt/6.3.2/mingw_64/include/QtCore/qdatetime.h \
@@ -1005,12 +1030,18 @@ debug/plotter.o: ../QtTcpClientConsumer/plotter.cpp ../QtTcpClientConsumer/plott
 		C:/Qt/6.3.2/mingw_64/include/QtCore/QSizeF \
 		C:/Qt/6.3.2/mingw_64/include/QtGui/QTransform \
 		C:/Qt/6.3.2/mingw_64/include/QtCore/qnativeinterface.h \
+		C:/Qt/6.3.2/mingw_64/include/QtCore/QTimer \
+		C:/Qt/6.3.2/mingw_64/include/QtCore/qtimer.h \
+		C:/Qt/6.3.2/mingw_64/include/QtCore/qbasictimer.h \
+		C:/Qt/6.3.2/mingw_64/include/QtCore/QVector \
+		C:/Qt/6.3.2/mingw_64/include/QtCore/qvector.h \
 		C:/Qt/6.3.2/mingw_64/include/QtGui/QPainter \
 		C:/Qt/6.3.2/mingw_64/include/QtGui/qpainter.h \
 		C:/Qt/6.3.2/mingw_64/include/QtGui/qtextoption.h \
 		C:/Qt/6.3.2/mingw_64/include/QtGui/qpen.h \
 		C:/Qt/6.3.2/mingw_64/include/QtGui/QBrush \
-		C:/Qt/6.3.2/mingw_64/include/QtGui/QPen
+		C:/Qt/6.3.2/mingw_64/include/QtGui/QPen \
+		C:/Qt/6.3.2/mingw_64/include/QtCore/QLine
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\plotter.o ..\QtTcpClientConsumer\plotter.cpp
 
 debug/moc_mainwindow.o: debug/moc_mainwindow.cpp 

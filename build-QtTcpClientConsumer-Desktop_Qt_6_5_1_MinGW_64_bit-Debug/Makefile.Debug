@@ -282,9 +282,14 @@ debug/moc_mainwindow.cpp: ../QtTcpClientConsumer/mainwindow.h \
 		C:/Qt/6.5.1/mingw_64/include/QtNetwork/qabstractsocket.h \
 		C:/Qt/6.5.1/mingw_64/include/QtNetwork/qhostaddress.h \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/QDebug \
+		C:/Qt/6.5.1/mingw_64/include/QtWidgets/QWidget \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QTimer \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qtimer.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qbasictimer.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QString \
 		debug/moc_predefs.h \
 		C:/Qt/6.5.1/mingw_64/bin/moc.exe
-	C:\Qt\6.5.1\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/andre/Downloads/QtSupervisory-main/QtSupervisory-main/build-QtTcpClientConsumer-Desktop_Qt_6_5_1_MinGW_64_bit-Debug/debug/moc_predefs.h -IC:/Qt/6.5.1/mingw_64/mkspecs/win32-g++ -IC:/Users/andre/Downloads/QtSupervisory-main/QtSupervisory-main/QtTcpClientConsumer -IC:/Qt/6.5.1/mingw_64/include -IC:/Qt/6.5.1/mingw_64/include/QtWidgets -IC:/Qt/6.5.1/mingw_64/include/QtGui -IC:/Qt/6.5.1/mingw_64/include/QtNetwork -IC:/Qt/6.5.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\QtTcpClientConsumer\mainwindow.h -o debug\moc_mainwindow.cpp
+	C:\Qt\6.5.1\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/andre/Downloads/PROJETO_PA_3U/QtSupervisory-main/QtSupervisory-main/build-QtTcpClientConsumer-Desktop_Qt_6_5_1_MinGW_64_bit-Debug/debug/moc_predefs.h -IC:/Qt/6.5.1/mingw_64/mkspecs/win32-g++ -IC:/Users/andre/Downloads/PROJETO_PA_3U/QtSupervisory-main/QtSupervisory-main/QtTcpClientConsumer -IC:/Qt/6.5.1/mingw_64/include -IC:/Qt/6.5.1/mingw_64/include/QtWidgets -IC:/Qt/6.5.1/mingw_64/include/QtGui -IC:/Qt/6.5.1/mingw_64/include/QtNetwork -IC:/Qt/6.5.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\QtTcpClientConsumer\mainwindow.h -o debug\moc_mainwindow.cpp
 
 debug/moc_plotter.cpp: ../QtTcpClientConsumer/plotter.h \
 		C:/Qt/6.5.1/mingw_64/include/QtWidgets/QWidget \
@@ -444,9 +449,14 @@ debug/moc_plotter.cpp: ../QtTcpClientConsumer/plotter.h \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/QSizeF \
 		C:/Qt/6.5.1/mingw_64/include/QtGui/QTransform \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/qnativeinterface.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QTimer \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qtimer.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qbasictimer.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QVector \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qvector.h \
 		debug/moc_predefs.h \
 		C:/Qt/6.5.1/mingw_64/bin/moc.exe
-	C:\Qt\6.5.1\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/andre/Downloads/QtSupervisory-main/QtSupervisory-main/build-QtTcpClientConsumer-Desktop_Qt_6_5_1_MinGW_64_bit-Debug/debug/moc_predefs.h -IC:/Qt/6.5.1/mingw_64/mkspecs/win32-g++ -IC:/Users/andre/Downloads/QtSupervisory-main/QtSupervisory-main/QtTcpClientConsumer -IC:/Qt/6.5.1/mingw_64/include -IC:/Qt/6.5.1/mingw_64/include/QtWidgets -IC:/Qt/6.5.1/mingw_64/include/QtGui -IC:/Qt/6.5.1/mingw_64/include/QtNetwork -IC:/Qt/6.5.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\QtTcpClientConsumer\plotter.h -o debug\moc_plotter.cpp
+	C:\Qt\6.5.1\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/andre/Downloads/PROJETO_PA_3U/QtSupervisory-main/QtSupervisory-main/build-QtTcpClientConsumer-Desktop_Qt_6_5_1_MinGW_64_bit-Debug/debug/moc_predefs.h -IC:/Qt/6.5.1/mingw_64/mkspecs/win32-g++ -IC:/Users/andre/Downloads/PROJETO_PA_3U/QtSupervisory-main/QtSupervisory-main/QtTcpClientConsumer -IC:/Qt/6.5.1/mingw_64/include -IC:/Qt/6.5.1/mingw_64/include/QtWidgets -IC:/Qt/6.5.1/mingw_64/include/QtGui -IC:/Qt/6.5.1/mingw_64/include/QtNetwork -IC:/Qt/6.5.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\QtTcpClientConsumer\plotter.h -o debug\moc_plotter.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -614,7 +624,12 @@ ui_mainwindow.h: ../QtTcpClientConsumer/mainwindow.ui \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/QSize \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/QSizeF \
 		C:/Qt/6.5.1/mingw_64/include/QtGui/QTransform \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/qnativeinterface.h
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qnativeinterface.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QTimer \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qtimer.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qbasictimer.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QVector \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qvector.h
 	C:\Qt\6.5.1\mingw_64\bin\uic.exe ..\QtTcpClientConsumer\mainwindow.ui -o ui_mainwindow.h
 
 compiler_yacc_decl_make_all:
@@ -797,6 +812,11 @@ debug/main.o: ../QtTcpClientConsumer/main.cpp ../QtTcpClientConsumer/mainwindow.
 		C:/Qt/6.5.1/mingw_64/include/QtNetwork/qabstractsocket.h \
 		C:/Qt/6.5.1/mingw_64/include/QtNetwork/qhostaddress.h \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/QDebug \
+		C:/Qt/6.5.1/mingw_64/include/QtWidgets/QWidget \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QTimer \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qtimer.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qbasictimer.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QString \
 		C:/Qt/6.5.1/mingw_64/include/QtWidgets/QApplication \
 		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qapplication.h \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/qcoreapplication.h \
@@ -989,63 +1009,16 @@ debug/mainwindow.o: ../QtTcpClientConsumer/mainwindow.cpp ../QtTcpClientConsumer
 		C:/Qt/6.5.1/mingw_64/include/QtNetwork/qabstractsocket.h \
 		C:/Qt/6.5.1/mingw_64/include/QtNetwork/qhostaddress.h \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/QDebug \
-		ui_mainwindow.h \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/QVariant \
-		C:/Qt/6.5.1/mingw_64/include/QtWidgets/QApplication \
-		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qapplication.h \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/qcoreapplication.h \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/qeventloop.h \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/qcoreapplication_platform.h \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/qfuture.h \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/qfutureinterface.h \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/qmutex.h \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/qtsan_impl.h \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/qresultstore.h \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/qfuture_impl.h \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/qthreadpool.h \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/qthread.h \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/qdeadlinetimer.h \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/qelapsedtimer.h \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/qrunnable.h \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/qexception.h \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/qpromise.h \
-		C:/Qt/6.5.1/mingw_64/include/QtGui/qguiapplication.h \
-		C:/Qt/6.5.1/mingw_64/include/QtGui/qinputmethod.h \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/qlocale.h \
-		C:/Qt/6.5.1/mingw_64/include/QtGui/qguiapplication_platform.h \
-		C:/Qt/6.5.1/mingw_64/include/QtWidgets/QLCDNumber \
-		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qlcdnumber.h \
-		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qframe.h \
-		C:/Qt/6.5.1/mingw_64/include/QtWidgets/QLabel \
-		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qlabel.h \
-		C:/Qt/6.5.1/mingw_64/include/QtGui/qpicture.h \
-		C:/Qt/6.5.1/mingw_64/include/QtGui/qtextdocument.h \
-		C:/Qt/6.5.1/mingw_64/include/QtWidgets/QMenuBar \
-		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qmenubar.h \
-		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qmenu.h \
-		C:/Qt/6.5.1/mingw_64/include/QtWidgets/QPushButton \
-		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/6.5.1/mingw_64/include/QtWidgets/QSlider \
-		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qslider.h \
-		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qabstractslider.h \
-		C:/Qt/6.5.1/mingw_64/include/QtWidgets/QStatusBar \
-		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qstatusbar.h \
-		C:/Qt/6.5.1/mingw_64/include/QtWidgets/QTextBrowser \
-		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qtextbrowser.h \
-		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qtextedit.h \
-		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qabstractscrollarea.h \
-		C:/Qt/6.5.1/mingw_64/include/QtGui/qtextoption.h \
-		C:/Qt/6.5.1/mingw_64/include/QtGui/qtextcursor.h \
-		C:/Qt/6.5.1/mingw_64/include/QtGui/qtextformat.h \
-		C:/Qt/6.5.1/mingw_64/include/QtGui/qpen.h \
-		C:/Qt/6.5.1/mingw_64/include/QtWidgets/QTextEdit \
-		C:/Qt/6.5.1/mingw_64/include/QtWidgets/QToolBar \
-		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qtoolbar.h \
 		C:/Qt/6.5.1/mingw_64/include/QtWidgets/QWidget \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QTimer \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qtimer.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qbasictimer.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QString \
+		ui_mainwindow.h \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/QDateTime \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/qdatetime.h \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/qcalendar.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qlocale.h \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/QTextStream \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/QTimerEvent
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o ..\QtTcpClientConsumer\mainwindow.cpp
@@ -1208,12 +1181,18 @@ debug/plotter.o: ../QtTcpClientConsumer/plotter.cpp ../QtTcpClientConsumer/plott
 		C:/Qt/6.5.1/mingw_64/include/QtCore/QSizeF \
 		C:/Qt/6.5.1/mingw_64/include/QtGui/QTransform \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/qnativeinterface.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QTimer \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qtimer.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qbasictimer.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QVector \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qvector.h \
 		C:/Qt/6.5.1/mingw_64/include/QtGui/QPainter \
 		C:/Qt/6.5.1/mingw_64/include/QtGui/qpainter.h \
 		C:/Qt/6.5.1/mingw_64/include/QtGui/qtextoption.h \
 		C:/Qt/6.5.1/mingw_64/include/QtGui/qpen.h \
 		C:/Qt/6.5.1/mingw_64/include/QtGui/QBrush \
-		C:/Qt/6.5.1/mingw_64/include/QtGui/QPen
+		C:/Qt/6.5.1/mingw_64/include/QtGui/QPen \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QLine
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\plotter.o ..\QtTcpClientConsumer\plotter.cpp
 
 debug/moc_mainwindow.o: debug/moc_mainwindow.cpp 

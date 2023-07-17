@@ -47,8 +47,8 @@ public:
     QLabel *contTimer;
     QPushButton *start;
     QPushButton *stop;
-    QLabel *onoff_2;
     QLabel *onoff;
+    QLabel *label_4;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -57,7 +57,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(537, 344);
+        MainWindow->resize(543, 334);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         layoutWidget = new QWidget(centralWidget);
@@ -101,8 +101,6 @@ public:
 
         min = new QLCDNumber(layoutWidget);
         min->setObjectName(QString::fromUtf8("min"));
-        min->setFrameShape(QFrame::Box);
-        min->setFrameShadow(QFrame::Plain);
         min->setSegmentStyle(QLCDNumber::Flat);
 
         gridLayout->addWidget(min, 3, 3, 1, 2);
@@ -120,7 +118,6 @@ public:
 
         max = new QLCDNumber(layoutWidget);
         max->setObjectName(QString::fromUtf8("max"));
-        max->setFrameShadow(QFrame::Plain);
         max->setSegmentStyle(QLCDNumber::Flat);
 
         gridLayout->addWidget(max, 5, 3, 1, 2);
@@ -152,20 +149,21 @@ public:
 
         gridLayout->addWidget(stop, 7, 2, 1, 3);
 
-        onoff_2 = new QLabel(layoutWidget);
-        onoff_2->setObjectName(QString::fromUtf8("onoff_2"));
-
-        gridLayout->addWidget(onoff_2, 8, 5, 1, 1);
-
         onoff = new QLabel(layoutWidget);
         onoff->setObjectName(QString::fromUtf8("onoff"));
 
         gridLayout->addWidget(onoff, 8, 0, 1, 2);
 
+        label_4 = new QLabel(layoutWidget);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout->addWidget(label_4, 8, 5, 1, 1);
+
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 537, 21));
+        menuBar->setGeometry(QRect(0, 0, 543, 21));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
@@ -189,10 +187,10 @@ public:
         label_2->setText(QCoreApplication::translate("MainWindow", "Max", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "Timing(s)", nullptr));
         contTimer->setText(QCoreApplication::translate("MainWindow", "1", nullptr));
-        start->setText(QCoreApplication::translate("MainWindow", "Start", nullptr));
-        stop->setText(QCoreApplication::translate("MainWindow", "Stop", nullptr));
-        onoff_2->setText(QString());
-        onoff->setText(QCoreApplication::translate("MainWindow", "Status", nullptr));
+        start->setText(QCoreApplication::translate("MainWindow", "start", nullptr));
+        stop->setText(QCoreApplication::translate("MainWindow", "stop", nullptr));
+        onoff->setText(QCoreApplication::translate("MainWindow", "Aguardando...", nullptr));
+        label_4->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
     } // retranslateUi
 
 };
