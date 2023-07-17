@@ -27,13 +27,9 @@ public slots:
     void ParaTemp();
 private slots:
     void on_connect_clicked();
-
     void on_disconnect_clicked();
-
     void on_barraMin_valueChanged(int value);
-
     void on_barraMax_valueChanged(int value);
-
     void on_barraTimer_valueChanged(int value);
 
 private:

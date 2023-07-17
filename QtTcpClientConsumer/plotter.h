@@ -2,20 +2,22 @@
 #define PLOTTER_H
 
 #include <QWidget>
+#include <QTimer>
+#include <QVector>
 
 class Plotter : public QWidget
 {
     Q_OBJECT
 private:
-    //float velocidade, update;
+    int *atl;
+    QTimer *atual;
+    QVector<int> valor;
 public:
     explicit Plotter(QWidget *parent = nullptr);
     void paintEvent(QPaintEvent *event);
-signals:
-
 public slots:
-   // void update(int update);
-    //void velocidade(int velocidade);
+    void setValor(int _valor);
+signals:
 
 };
 

@@ -4,6 +4,9 @@
 #include <QMainWindow>
 #include <QTcpSocket>
 #include <QDebug>
+#include <QWidget>
+#include <QTimer>
+#include <QString>
 
 namespace Ui {
 class MainWindow;
@@ -25,14 +28,13 @@ public slots:
 private slots:
     void on_desconectado_clicked();
     void on_conectado_clicked();
-
-
-
-    void on_barraTempo_valueChanged(int value);
-
+    void on_barraTimer_valueChanged(int value);
     void on_start_clicked();
 
 private:
+  int interv;
+  int valores;
+  QTimer *Temp;
   Ui::MainWindow *ui;
   QTcpSocket *socket;
 };

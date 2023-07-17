@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>537</width>
-    <height>344</height>
+    <width>543</width>
+    <height>334</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -64,12 +64,6 @@
      </item>
      <item row="3" column="3" colspan="2">
       <widget class="QLCDNumber" name="min">
-       <property name="frameShape">
-        <enum>QFrame::Box</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Plain</enum>
-       </property>
        <property name="segmentStyle">
         <enum>QLCDNumber::Flat</enum>
        </property>
@@ -91,9 +85,6 @@
      </item>
      <item row="5" column="3" colspan="2">
       <widget class="QLCDNumber" name="max">
-       <property name="frameShadow">
-        <enum>QFrame::Plain</enum>
-       </property>
        <property name="segmentStyle">
         <enum>QLCDNumber::Flat</enum>
        </property>
@@ -108,9 +99,6 @@
      </item>
      <item row="6" column="1" colspan="3">
       <widget class="QSlider" name="barraTimer">
-       <property name="minimum">
-        <number>1</number>
-       </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -126,28 +114,21 @@
      <item row="7" column="0" colspan="2">
       <widget class="QPushButton" name="start">
        <property name="text">
-        <string>Start</string>
+        <string>start</string>
        </property>
       </widget>
      </item>
      <item row="7" column="2" colspan="3">
       <widget class="QPushButton" name="stop">
        <property name="text">
-        <string>Stop</string>
-       </property>
-      </widget>
-     </item>
-     <item row="8" column="5">
-      <widget class="QLabel" name="onoff_2">
-       <property name="text">
-        <string/>
+        <string>stop</string>
        </property>
       </widget>
      </item>
      <item row="8" column="0" colspan="2">
       <widget class="QLabel" name="onoff">
        <property name="text">
-        <string>Status</string>
+        <string>Aguardando...</string>
        </property>
       </widget>
      </item>
@@ -159,7 +140,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>537</width>
+     <width>543</width>
      <height>21</height>
     </rect>
    </property>

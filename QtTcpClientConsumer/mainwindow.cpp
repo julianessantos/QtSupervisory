@@ -10,6 +10,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
   ui->setupUi(this);
   socket = new QTcpSocket(this);
+  tcpConnect();
 
   connect(ui->conectado,
           SIGNAL(clicked(bool)),
@@ -22,22 +23,20 @@ MainWindow::MainWindow(QWidget *parent) :
   connect(ui->start,
           SIGNAL(clicked(bool)),
           this,
-          SLOT(on_start_clicked())
-          );
+          SLOT(on_start_clicked()));
 }
 
-
 void MainWindow::tcpConnect(){
-  socket->connectToHost(ui->textEdit->toPlainText(),1234);
+  socket->connectToHost(ui->endIp->text(),1234);
   if(socket->waitForConnected(3000)){
     qDebug() << "Connected";
     ui->label_2->setText("Conectado");
-    ui->textBrowser->setText(ui->textEdit->toPlainText());
+    ui->listaIPs->setText(ui->endIp->text());
   }
   else{
     qDebug() << "Disconnected";
     ui->label_2->setText("Desconectado");
-    ui->textBrowser->setText("Endereço de Ip inválido.");
+    ui->listaIPs->setText("Endereço de Ip inválido.");
   }
 }
 
@@ -46,7 +45,9 @@ void MainWindow::getData(){
   QByteArray array;
   QStringList list;
   qint64 thetime;
+
   qDebug() << "to get data...";
+
   if(socket->state() == QAbstractSocket::ConnectedState){
     if(socket->isOpen()){
       qDebug() << "reading...";
@@ -54,6 +55,7 @@ void MainWindow::getData(){
       socket->waitForBytesWritten();
       socket->waitForReadyRead();
       qDebug() << socket->bytesAvailable();
+
       while(socket->bytesAvailable()){
         str = socket->readLine().replace("\n","").replace("\r","");
         list = str.split(" ");
@@ -73,31 +75,29 @@ void MainWindow::copiatexto()
 {
   QString end_ip ="127.0.0.1";
 
-  if(ui->textEdit->toPlainText() == end_ip){
+  if(ui->endIp->text() == end_ip){
   tcpConnect();
-  ui->textBrowser->setText(ui->textEdit->toPlainText());
+  ui->listaIPs->setText(ui->endIp->text());
   } else{
-  ui->textBrowser->setText("Endereço de Ip inválido.");
+  ui->listaIPs->setText("Endereço de Ip inválido.");
   socket->disconnectFromHost();
   ui->label_2->setText("Desconectado");
   }
 }
 
 
-MainWindow::~MainWindow()
-{
+MainWindow::~MainWindow(){
   delete socket;
   delete ui;
 }
 
-void MainWindow::on_conectado_clicked()
-{
+void MainWindow::on_conectado_clicked(){
   QString end_ip ="127.0.0.1";
-  if(ui->textEdit->toPlainText() == end_ip){
+  if(ui->endIp->text() == end_ip){
   tcpConnect();
   }
   else{
-  ui->textBrowser->setText("Endereço de Ip inválido.");
+  ui->listaIPs->setText("Endereço de Ip inválido.");
   socket->disconnectFromHost();
   ui->label_2->setText("Desconectado");
   }
@@ -108,14 +108,11 @@ void MainWindow::on_desconectado_clicked(){
   ui->label_2->setText("Desconectado");
 }
 
-void MainWindow::on_barraTempo_valueChanged(int value)
-{
-  ui->labelTemp->setText(QString::number(value));
+void MainWindow::on_barraTimer_valueChanged(int value){
+  ui->labelTimer->setText(QString::number(value));
 }
 
-
-void MainWindow::on_start_clicked()
-{
+void MainWindow::on_start_clicked(){
     getData();
 }
 
