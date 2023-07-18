@@ -34,14 +34,14 @@ private slots:
     //void on_stop_clicked();
     void timerStop();
     void timerEvent();
-    //void updateIp();
 
 private:
-  int interv;
-  int valores;
   QTimer *Temp;
   Ui::MainWindow *ui;
   QTcpSocket *socket;
+  int interv;
+  int valores;
+  int temporizador;
 };
 
 #endif // MAINWINDOW_H

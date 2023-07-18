@@ -128,7 +128,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="onoff">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -141,7 +141,7 @@
      <string>Aguardando...</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_4">
+   <widget class="QLabel" name="startstop">
     <property name="geometry">
      <rect>
       <x>590</x>

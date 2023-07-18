@@ -11,26 +11,22 @@ MainWindow::MainWindow(QWidget *parent) :
   ui->setupUi(this);
   socket = new QTcpSocket(this);
 
-  connect(ui->conectado,
+  connect(ui->conectado, //Conecta o consumidor ao servidor ao clicar no botao conectar
           SIGNAL(clicked(bool)),
           this,
           SLOT(on_conectado_clicked()));
-  connect(ui->desconectado,
+  connect(ui->desconectado, //Desconecta o consumidor do servidor ao clicar no botao desconectar
           SIGNAL(clicked(bool)),
           this,
           SLOT(on_desconectado_clicked()));
-  connect(ui->start,
+  connect(ui->start, //Inicia o grafico
           SIGNAL(clicked(bool)),
           this,
           SLOT(getData()));
-  connect(ui->stop,
+  connect(ui->stop, //Para o grafico
           SIGNAL(clicked(bool)),
           this,
           SLOT(timerStop()));
-  connect(ui->barraTimer,
-          SIGNAL(valueChanged(int)),
-          this,
-          SLOT(valorInterv(int)));
 
   Temp = new QTimer(this);
   Temp->setInterval(interv);
@@ -45,10 +41,6 @@ MainWindow::MainWindow(QWidget *parent) :
           SIGNAL(clicked()),
           this,
           SLOT(on_start_clicked()));
-  connect(ui->update,
-          SIGNAL(clicked()),
-          this,
-          SLOT(updateIp()));
 
   connect(Temp,
           SIGNAL(timeout()),
@@ -60,12 +52,12 @@ void MainWindow::tcpConnect(){
   socket->connectToHost(ui->endIp->text(),1234);
   if(socket->waitForConnected(3000)){
     qDebug() << "Connected";
-    ui->label_2->setText("Conectado");
+    ui->onoff->setText("Conectado");
     ui->listaIPs->setText(ui->endIp->text());
   }
   else{
     qDebug() << "Disconnected";
-    ui->label_2->setText("Desconectado");
+    ui->onoff->setText("Desconectado");
     ui->listaIPs->setText("Endereço de Ip inválido.");
   }
 }
@@ -115,12 +107,12 @@ void MainWindow::copiatexto(){
   QString end_ip ="127.0.0.1";
 
   if(ui->endIp->text() == end_ip){
-  tcpConnect();
-  ui->listaIPs->setText(ui->endIp->text());
+      tcpConnect();
+      ui->listaIPs->setText(ui->endIp->text());
   } else{
-  ui->listaIPs->setText("Endereço de Ip inválido.");
-  socket->disconnectFromHost();
-  ui->label_2->setText("Desconectado");
+      ui->listaIPs->setText("Endereço de Ip inválido.");
+      socket->disconnectFromHost();
+      ui->onoff->setText("Desconectado");
   }
 }
 
@@ -135,7 +127,7 @@ void MainWindow::timerEvent(){
 
 void MainWindow::timerStop(){
   Temp->stop();
-  ui->label_4->setText("Stop");
+  ui->startstop->setText("Stop");
 }
 
 void MainWindow::on_conectado_clicked(){
@@ -146,13 +138,13 @@ void MainWindow::on_conectado_clicked(){
   else{
     ui->listaIPs->setText("Endereço de Ip inválido.");
     socket->disconnectFromHost();
-    ui->label_2->setText("Desconectado");
+    ui->onoff->setText("Desconectado");
   }
 }
 
 void MainWindow::on_desconectado_clicked(){
   socket->disconnectFromHost();
-  ui->label_2->setText("Desconectado");
+  ui->onoff->setText("Desconectado");
 }
 
 void MainWindow::on_barraTimer_valueChanged(int value){
@@ -162,7 +154,7 @@ void MainWindow::on_barraTimer_valueChanged(int value){
 void MainWindow::on_start_clicked(){
     getData();
     ui->widget->setValor(valores);
-    ui->label_4->setText("Start");
+    ui->startstop->setText("Start");
 }
 
 
