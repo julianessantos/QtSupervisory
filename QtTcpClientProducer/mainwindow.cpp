@@ -8,22 +8,22 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     socket = new QTcpSocket(this);
 
-    connect(ui->start,
+    connect(ui->start, //Inicia o temporizador
             SIGNAL(clicked()),
             this,
             SLOT(IniciarTemp())
             );
-    connect(ui->stop,
+    connect(ui->stop, //Para o temporizador
             SIGNAL(clicked()),
             this,
             SLOT(ParaTemp())
             );
-    connect(ui->connect,
+    connect(ui->connect, //Conecta o produtor ao servidor ao clicar no botao conectar
             SIGNAL(clicked()),
             this,
             SLOT(on_connect_clicked())
             );
-    connect(ui->disconnect,
+    connect(ui->disconnect, //Desconecta o produtor do servidor ao clicar no botao desconectar
             SIGNAL(clicked()),
             this,
             SLOT(on_disconnect_clicked())
@@ -46,8 +46,8 @@ void MainWindow::putData(){
     QString str;
     qint64 msecdate;
 
-    int valor_min = ui->min->value();
-    int valor_max = ui->max->value();
+    int valor_min = ui->min->value(); //Define o valor min a partir da barra de minimo
+    int valor_max = ui->max->value(); //Define o valor max a partir da barra de maximo
 
     if(socket->state()== QAbstractSocket::ConnectedState){
 
@@ -69,7 +69,6 @@ void MainWindow::on_connect_clicked(){
     tcpConnect();
 }
 
-
 void MainWindow::on_disconnect_clicked(){
     socket->disconnectFromHost();
     ui->onoff->setText("Desconectado");
@@ -80,27 +79,25 @@ void MainWindow::timerEvent(QTimerEvent *event){
 }
 
 void MainWindow::IniciarTemp(){
-    int temp_seg = 500*ui->barraTimer->value();
+    int temp_seg = 1000*ui->barraTimer->value();
     temporizador = startTimer(temp_seg);
-    ui->label_4->setText("Start");
+    ui->startstop->setText("Start");
 }
 
 void MainWindow::ParaTemp(){
     killTimer(temporizador);
-    ui->label_4->setText("Stop");
+    ui->startstop->setText("Stop");
 }
 
-
-void MainWindow::on_barraMin_valueChanged(int value){
+void MainWindow::on_barraMin_valueChanged(int value){//Conecta a barra de min ao display
     ui->min->display(value);
 }
 
-
-void MainWindow::on_barraMax_valueChanged(int value){
+void MainWindow::on_barraMax_valueChanged(int value){//Conecta a barra de max ao display
     ui->max->display(value);
 }
 
-void MainWindow::on_barraTimer_valueChanged(int value){
+void MainWindow::on_barraTimer_valueChanged(int value){//Conecta a barra de timer ao label
     ui->contTimer->setText(QString::number(value));
 }
 
